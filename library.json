@@ -1,0 +1,13 @@
+{
+  "name": "led-binning-instrument",
+  "version": "0.1.0",
+  "author": "Oscar Campbell",
+  "email": "oscar@campbell.nu",
+  "description": "Measures a bunch of characteristics of a LED then logs it. After measuring a bunch of LED's you can generate best matched serial/parallel setups for most even voltage/current/light distribution.",
+  "keywords": "light meter current voltage led bin binning sorting",
+  "license": "ISC",
+  "repository": "https://manc.se/ozra/led-binning-instrument",
+  "main": "src/main.cc",
+  "lib_deps": {},
+  "devDependencies": {}
+}

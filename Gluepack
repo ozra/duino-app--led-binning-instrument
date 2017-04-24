@@ -1,0 +1,50 @@
+# Identifying information
+name:        led-binning-instrument
+type:        wir11/app
+categories:
+maintainers: Oscar Campbell           # "maintainer" works too
+authors:     Oscar Campbell           # "author" works too
+email:       oscar@campbell.nu
+version:     0.1.0
+description: "Measures a bunch of characteristics of a LED then logs its brightness, efficiency, effective voltage at desired current, etc. After measuring a bunch of LED's you can generate best matched serial/parallel setups for the best voltage/current/light distribution (provided you keep track of the measured LEDS, put them in a line / numbered.)"
+keywords:    light meter current voltage led bin binning sorting
+
+# Package sources and locations
+issues: https://manc.se/ozra/led-binning-instrument/issues
+upstream: https://manc.se/ozra/led-binning-instrument
+sources:
+   - https://manc.se/ozra/led-binning-instrument
+
+# Dependencies
+deps:
+   wir11:
+      StdLib-DuinoHardware:   ^1.6.0
+      OnyxTypeAliases:        ^0.1.0
+      HolyDio:                ^0.1.0
+      ChronoTrigger:          ^0.1.0
+      Dsp:                    ^0.1.0
+
+#      LazyServo:              ^0.1.0
+#       Temperature-DS18B20:    ^0.1.0
+
+      # *TODO* remove when automated (recursive deps) is fixed:
+#       UnitRangeControl:       ^0.1.0
+#       Servo:                  ^0.1.0
+#       DallasTemperature:      ^0.1.0
+
+
+      # TODO* this one then?
+      DebugLogger:            ^0.1.0
+
+      # *TODO* how about this dep? make implicit? Fuck. No!
+#      OneWire:                ^0.1.0
+
+dev-deps:
+   build:
+      wirduino-makefile:      ^0.1.0
+      atmel-avr-tools:        ^0.1.0
+
+# Directory mappings for deps to side-step defaults
+deps-mapping:
+   wir11:   deps
+   _:       utils
